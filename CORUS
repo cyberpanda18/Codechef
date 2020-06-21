@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int t; cin>>t;
+	while(t--)
+	{
+		long int n,q,c;
+		cin>>n>>q;
+		string s;
+		cin>>s;
+		int arr[26]={0};
+		
+for(int i=0;i<n;i++)
+{
+int m=(int)s[i];
+arr[m-97]++;
+}
+
+		 while(q--)
+		{
+			cin>>c;
+			int sum=0;
+			for(int i=0;i<26;i++)
+		{	
+			if((arr[i]-c)>0)
+			sum=sum+arr[i]-c;
+		}
+		cout<<sum<<endl;
+	}
+	}
+	
+	return 0;
+}
