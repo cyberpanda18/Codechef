@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int a,b;
+	cin>>a>>b;
+	int c=a-b;
+	int i=c;
+	int arr[5];
+	int count=-1;
+	while(i>0)
+	{
+	    count++;
+	    arr[count]=i;
+	     i=i/10;
+	     //cout<<count<<" "<<i<<endl;
+	}
+	//cout<<count<<endl;
+	if(arr[count]==1)
+	arr[count]=5;
+	else
+	arr[count]=1;
+	
+	for(int j=count;j>=0;j--)
+	cout<<arr[j];
+	return 0;
+}
