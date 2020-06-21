@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int a,b,c,d;
+	int t;cin>>t;
+	while(t--)
+	{
+	    cin>>a>>b>>c>>d;
+	    cout<<a+c-d<<" ";
+	    cout<<a+b-d<<" ";
+	    cout<<b+c-d<<" ";
+	    cout<<endl;
+	}return 0;
+}
