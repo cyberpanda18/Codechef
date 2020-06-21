@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--)
+	{
+		int n;
+		cin>>n;
+		int arr[n];
+		for(int i=0;i<n;i++)
+		{
+			cin>>arr[i];
+		}
+		int five=0,ten=0,flag=0,money=0;
+		for(int i=0;i<n;i++)
+		{
+			if(arr[i]==5)
+		{	five++;
+		money=money+5;
+		}
+		else if(arr[i]==10)
+		{
+			if(five>0)
+			{
+				money=money+10-5;
+				ten++;
+				five--;
+		}
+		else
+		{flag=1;break;}
+		}
+		else if(arr[i]==15)
+		{
+			if(ten>0)
+			{
+				money=money+15-10;
+				ten--;
+			}
+			else if(five>1)
+			{
+				money=money+15-10;
+				five=five-2;
+			}
+			else
+			{flag=1;break;}
+		}
+			
+	}
+	if(flag==1)
+	cout<<"NO"<<endl;
+	else
+	cout<<"YES"<<endl;
+	}
+	return 0;
+}
